@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+/Users/csuftitan/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
-2594777448.index
-475713005.index
-1865797976.index
