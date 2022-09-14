@@ -1,4 +1,4 @@
-package dsAlgo;
+package Recursion;
 import java.io.*;
 
 public class Factorial {
