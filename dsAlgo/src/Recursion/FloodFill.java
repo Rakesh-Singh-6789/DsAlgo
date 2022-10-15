@@ -33,14 +33,10 @@ public class FloodFill {
 			System.out.println(path);
 			return;
 		}
+		
+		
 		visited[m][n] = true;
-//		for (int i = 0; i < visited.length; i++) {
-//			for (int j = 0; j < visited[0].length; j++) {
-//				System.out.print(visited[i][j] ? "-" : "0");
-//			}
-//			System.out.println();
-//		}
-//		System.out.println();
+
 		if (m - 1 >= 0 && visited[m - 1][n] == false && arr[m - 1][n] != 1) {
 			// visited[m - 1][n] = true;
 			printFloodFill(arr, m - 1, n, path + "t", visited);
