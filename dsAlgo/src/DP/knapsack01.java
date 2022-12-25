@@ -44,17 +44,14 @@ public class knapsack01 {
 				
 				int uparWala = dp[i-1][j];
 				
+				dp[i][j] = uparWala;
+				
 				if(j >= currentWeight) {
 					int includingCurrentWeight = currentPrice + dp[i-1][j-currentWeight];
 					if(includingCurrentWeight > uparWala) {
 						dp[i][j] = includingCurrentWeight;
-					} else {
-						dp[i][j] = uparWala;
-					}
-				} else {
-					dp[i][j] = uparWala;
-				}
-				
+					} 
+				} 
 			}
 		}
 		
