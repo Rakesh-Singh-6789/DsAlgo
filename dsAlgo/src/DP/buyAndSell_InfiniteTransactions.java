@@ -22,15 +22,12 @@ public class buyAndSell_InfiniteTransactions {
 		int sell = prices[0];
 		
 		for(int i =1; i<n ; i++) {
-			
 			if(prices[i] < sell) {
 				overAllProfit += (sell - buy);
 				buy = sell = prices[i];
 			} else {
 				sell = prices[i];
 			}
-			
-			
 		}
 		System.out.println(overAllProfit);
 	}
