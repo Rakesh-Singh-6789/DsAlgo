@@ -1,9 +1,13 @@
 package randomLC;
 
+import java.util.ArrayList;
+
 public class countSubset {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		ArrayList<Integer> list = new ArrayList<>();
+		
 		//int num[] = {1,4,4,5};
 		int num[] = {5, 9, 10, 8, 9, 8, 1, 2, 5, 6, 1, 7};
 		int dp[][] = new int[num.length][5];
