@@ -1,5 +1,7 @@
 package randomLC;
 
+import java.util.*;
+
 public class DP_Longest_pallindromic_subsequence {
 
 	public static void main(String[] args) {
@@ -31,4 +33,28 @@ public class DP_Longest_pallindromic_subsequence {
 	        //if not match
 	        return dp[nIdx][mIdx] = Math.max(f(a,b,nIdx-1,mIdx,dp), f(a,b,nIdx,mIdx-1,dp));
 	    }
+	    
 	}
+	public static List< Integer > superiorElements(int []arr) {
+        // Write your code here.
+        List<Integer> list = new ArrayList<>();
+        int n = arr.length;
+        int minSoFar = arr[n-1];
+        int maxSoFar = arr[n-1];
+
+        list.add(maxSoFar);
+        for(int i=n-2; i>=0; i--) {
+            if(maxSoFar > arr[i] && minSoFar > arr[i]) {
+                list.add(arr[i]);
+                continue;
+            } 
+            if(arr[i] > maxSoFar) {
+                maxSoFar = arr[i];
+            } 
+            if(arr[i] < minSoFar) {
+                minSoFar = arr[i];
+            }
+        }
+         Collections.sort(list);
+         return list;
+    }
