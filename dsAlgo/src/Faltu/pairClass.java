@@ -43,7 +43,9 @@ public class pairClass {
 			pairList.add(temp);
 		}
 		
+		
 		pairList.sort((a,b)->{return b.freq - a.freq;});
+		
 		for(Pair p: pairList)
 			System.out.println(p.value + "-" + p.freq);
 	}
